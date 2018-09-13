@@ -2,14 +2,20 @@ import os
 from tkinter import *
 from tkinter import messagebox
 
+# Initializing window
 window = Tk()
 window.title("Bachelorarbeit Interface")
 window.geometry('500x200')
 window.configure(background="light blue")
 
+# Defining functions to call scripts when corresponding button is pressed
+#
+# As portainer.io.bat is in the same directory as GUI.py no directory changes are required
 def callPortainer():
     os.system("run_portainer.io.bat")
-    
+
+# odm_script.bat is in a child directory
+# therefore the functions changes directory one down, calls script and returns for reusability
 def callODM():
     os.chdir("ODM")
     os.system("odm_script.bat")
@@ -48,6 +54,7 @@ def callQgisunsupervised_interactive():
 def callWorkflow():
     os.system("workflow_automatic.bat")
 
+# Building buttons to call the functions
 portainerBtn = Button(window, text="Open Portainer.io", command = callPortainer)
 portainerBtn.grid(column=1, row=0, padx=(10, 0), pady=(10, 0))
 
@@ -75,6 +82,7 @@ qgisBtn5.grid (column=3, row=4, sticky=W, padx=(10, 0), pady=(10, 0))
 workflowBtn=Button(window, text="Run Wofklow", bg="lime green", command = callWorkflow)
 workflowBtn.grid(column=1, row=1, padx=(10, 0), pady=(10, 0))
 
-#messagebox.showinfo('Warning!', 'Remember to make sure the required files for script execution exist')
+# Reminder to have required data in the specified folders for scripts
+messagebox.showinfo('Warning!', 'Remember to make sure the required files for script execution exist! \n\nODM: Images in /ODM/images \nNDVI: odm_orthophoto.tif in /NDVI \nQGIS: odm_orthophoto.tif in /QGIS \nComplete Workflow: Images in /ODM/images')
 
 window.mainloop()
