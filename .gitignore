@@ -5,7 +5,9 @@ ODM\images\*
 # Ignore image files in \NDVI
 NDVI\odm_orthophoto.tif
 NDVI\results\*
+!NDVI\results\.gitkeep
 
 # Ignore image files in \QGIS
 QGIS\odm_orthophoto.tif
 QGIS\results\*
+!QGIS\results\.gitkeep
