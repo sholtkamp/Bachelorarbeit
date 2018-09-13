@@ -1,0 +1,119 @@
+{
+    "values": {
+        "inputs": {
+            "cirinput": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 78.0, 
+                            "x": 131.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "cirinput", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "CIR_Input"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }
+        }, 
+        "helpContent": {}, 
+        "group": "BA", 
+        "name": "BA_vectorize", 
+        "algs": {
+            "GDALOGRCONTOUR_1": {
+                "values": {
+                    "name": "GDALOGRCONTOUR_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "OUTPUT_VECTOR": {
+                            "values": {
+                                "description": "contour", 
+                                "pos": {
+                                    "values": {
+                                        "y": 339.0, 
+                                        "x": 134.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 249.0, 
+                            "x": 134.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "INPUT_RASTER": {
+                            "values": {
+                                "alg": "OTBRADIOMETRICINDICES_1", 
+                                "output": "-out"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "INTERVAL": 0.15, 
+                        "FIELD_NAME": "ELEV", 
+                        "EXTRA": null
+                    }, 
+                    "active": true, 
+                    "consoleName": "gdalogr:contour", 
+                    "description": "Contour"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "OTBRADIOMETRICINDICES_1": {
+                "values": {
+                    "name": "OTBRADIOMETRICINDICES_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 161.0, 
+                            "x": 131.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "-channels.nir": 1.0, 
+                        "-channels.mir": 1.0, 
+                        "-in": {
+                            "values": {
+                                "name": "cirinput"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "-list": 0, 
+                        "-channels.blue": 3.0, 
+                        "-ram": 128.0, 
+                        "-channels.green": 2.0, 
+                        "-channels.red": 3.0
+                    }, 
+                    "active": true, 
+                    "consoleName": "otb:radiometricindices", 
+                    "description": "high_contrast"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }
+        }
+    }, 
+    "class": "processing.modeler.ModelerAlgorithm.ModelerAlgorithm"
+}

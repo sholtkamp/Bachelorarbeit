@@ -1,0 +1,86 @@
+{
+    "values": {
+        "inputs": {
+            "input": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 120.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "input", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Input"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }
+        }, 
+        "helpContent": {}, 
+        "group": "BA", 
+        "name": "BA_5_classes_unsupervised", 
+        "algs": {
+            "OTBUNSUPERVISEDKMEANSIMAGECLASSIFICATION_1": {
+                "values": {
+                    "name": "OTBUNSUPERVISEDKMEANSIMAGECLASSIFICATION_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "-out": {
+                            "values": {
+                                "description": "5_classes_unsupervised_raster", 
+                                "pos": {
+                                    "values": {
+                                        "y": 253.0, 
+                                        "x": 125.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 160.0, 
+                            "x": 120.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "-maxit": 1000.0, 
+                        "-ct": 0.0001, 
+                        "-in": {
+                            "values": {
+                                "name": "input"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "-ts": 100.0, 
+                        "-ram": 2048.0, 
+                        "-nc": 5.0, 
+                        "-vm": null
+                    }, 
+                    "active": true, 
+                    "consoleName": "otb:unsupervisedkmeansimageclassification", 
+                    "description": "Unsupervised KMeans image classification"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }
+        }
+    }, 
+    "class": "processing.modeler.ModelerAlgorithm.ModelerAlgorithm"
+}

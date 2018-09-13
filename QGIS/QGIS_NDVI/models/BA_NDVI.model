@@ -1,0 +1,87 @@
+{
+    "values": {
+        "inputs": {
+            "input": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 120.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "input", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Input"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }
+        }, 
+        "helpContent": {}, 
+        "group": "BA", 
+        "name": "BA_NDVI", 
+        "algs": {
+            "OTBRADIOMETRICINDICES_1": {
+                "values": {
+                    "name": "OTBRADIOMETRICINDICES_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "-out": {
+                            "values": {
+                                "description": "NDVI_raster", 
+                                "pos": {
+                                    "values": {
+                                        "y": 254.0, 
+                                        "x": 129.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 160.0, 
+                            "x": 120.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "-channels.nir": 3.0, 
+                        "-channels.mir": 1.0, 
+                        "-in": {
+                            "values": {
+                                "name": "input"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "-list": 0, 
+                        "-channels.blue": 1.0, 
+                        "-ram": 2048.0, 
+                        "-channels.green": 2.0, 
+                        "-channels.red": 1.0
+                    }, 
+                    "active": true, 
+                    "consoleName": "otb:radiometricindices", 
+                    "description": "Radiometric Indices"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }
+        }
+    }, 
+    "class": "processing.modeler.ModelerAlgorithm.ModelerAlgorithm"
+}
