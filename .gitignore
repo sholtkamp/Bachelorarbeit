@@ -13,3 +13,6 @@ NDVI/results/*
 QGIS/odm_orthophoto.tif
 QGIS/results/*
 !QGIS/results/.gitkeep
+
+# Ignore all private documents
+Dokumente/
