@@ -4,13 +4,12 @@
 #
 #   http://www.apache.org/licenses/LICENSE-2.0
 
-# Print out QGIS 
+# Print out QGIS environment
 echo "### model.sh ### Installed software versions:"
 python -c 'import qgis.utils; print "QGIS: %s" % qgis.utils.QGis.QGIS_VERSION'
 echo "QGIS processing plugin:" $(
 cat /usr/share/qgis/python/plugins/processing/metadata.txt | grep "version")
 python --version
-#saga_cmd --version --version 2>&1 | head -1
 echo "Orfeo Toolbox (OTB) 5.6.1-Linux64"
 
 echo " "
@@ -19,10 +18,6 @@ mkdir -p $QGIS_USER_MODELDIR
 echo "### model.sh ### Using QGIS model file" $(ls $QGIS_MODELFILE)
 cp $QGIS_MODELFILE $QGIS_USER_MODELDIR/docker.model
 echo "### model.sh ### Model files is directory" $QGIS_USER_MODELDIR":" $(ls $QGIS_USER_MODELDIR)
-
-#echo " "
-#echo "### model.sh ### environment:"
-#printenv
 
 # We expect the container is started with script files configured via environment variable
 mkdir -p $QGIS_USER_SCRIPTDIR
@@ -45,6 +40,6 @@ echo " "
 echo "### model.sh ### QGIS log:"
 cat $QGIS_LOGFILE
 
-echo " "
-echo "### model.sh ### Workspace directory contents:"
-tree /workspace
+#echo " "
+#echo "### model.sh ### Workspace directory contents:"
+#tree /workspace

@@ -61,6 +61,4 @@ WORKDIR /qgis
 COPY model.sh model.sh
 RUN chmod 0755 model.sh
 
-
-
 ENTRYPOINT ["/bin/bash", "/qgis/model.sh"]

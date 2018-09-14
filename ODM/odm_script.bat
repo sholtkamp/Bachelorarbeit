@@ -1,11 +1,11 @@
 REM Building ODM environment
 @echo off
-mkdir odm_georeferencing
-mkdir odm_orthophoto
-mkdir odm_texturing
-mkdir odm_meshing
-mkdir opensfm
-mkdir odm_dem
+mkdir odm_georeferencing >nul 2>&1
+mkdir odm_orthophoto >nul 2>&1
+mkdir odm_texturing >nul 2>&1
+mkdir odm_meshing >nul 2>&1
+mkdir opensfm >nul 2>&1
+mkdir odm_dem >nul 2>&1
 echo on
 REM Done
 REM Running ODM

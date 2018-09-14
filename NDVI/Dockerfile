@@ -23,5 +23,5 @@ RUN apt-get update \
 # Install numpy for ndvi.py 
 RUN pip3 install numpy
 
-# Run start.sh when the container launches
+# Run ndvi.py when the container launches
 ENTRYPOINT ["python", "ndvi.py"]

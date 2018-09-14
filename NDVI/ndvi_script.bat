@@ -1,7 +1,6 @@
 REM Calculating NDVI
-docker build -t ndvi_image . 
-docker run --name=ndvi_container ndvi_image 
-REM Making NDVI folder
+docker build -t ba/ndvi_image . 
+docker run --name=ndvi_container ba/ndvi_image 
 @echo off
 mkdir results >nul 2>&1
 @cd results
@@ -11,7 +10,7 @@ set ndvi_dirname="%ndvi_dirdate%_%ndvi_dirtime%"
 set formated_ndvi_dirname=%ndvi_dirname::=.%
 mkdir %formated_ndvi_dirname%
 @cd ..
-docker cp ndvi_container:/workspace %~dp0
+@docker cp ndvi_container:/workspace %~dp0
 @move %~dp0workspace\ndvi.tif %~dp0results\%formated_ndvi_dirname% >nul
 echo on
 REM Cleaning up workspace

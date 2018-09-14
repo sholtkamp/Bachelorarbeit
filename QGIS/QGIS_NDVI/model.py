@@ -1,13 +1,10 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-# Copyright 2016 Daniel Nüst
+# Based on the 2016 version written by Daniel Nuest <daniel.nuest@uni-muenster.de>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#   http://www.apache.org/licenses/LICENSE-2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 
 import sys
 import os
@@ -74,10 +71,8 @@ print("###### Input file " + input_image)
 
 output_directory = os.path.join(os.getenv('QGIS_RESULT', os.path.join(tempfile.gettempdir(), 'results')), datetime.datetime.now().strftime("%d.%m.%Y_%H.%M.%S (QGIS NDVI)"))
 make_sure_path_exists(output_directory)
-
 output_image = os.path.join(output_directory, "NDVI.tif")
 
-#print(output_directory)
 print("###### Saving output to file to " + output_image)
 
 print("###### Start processing at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " ...")
@@ -87,10 +82,3 @@ processing.runalg("modeler:docker", input_image, output_image)
 
 end = timer()
 print("###### Processing complete at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + ", took " + str(end-start) + " seconds")
-
-#print("###### Output image info:")
-#os.system("gdalinfo " + output_image)
-
-#output_preview = os.path.join(output_directory, "result.jpg")
-#os.system("gdal_translate -of JPEG -scale " + output_image + " " + output_preview)
-#print("###### Created jpg preview for result.tif")
