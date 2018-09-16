@@ -5,8 +5,8 @@ copy odm_orthophoto.tif QGIS_NDVI_unsupervised
 cd QGIS_NDVI_unsupervised
 echo on
 REM Calculating NDVI and Classification now
-docker build -t ba/qgis_container . 
-docker run --name=QGIS ba/qgis_container
+docker build -t sholtkamp/qgis:1.0 . 
+docker run --name=QGIS sholtkamp/qgis:1.0
 REM Making the results accessable in the QGIS\results folder
 @docker cp QGIS:/results %~dp0 >nul
 @xcopy %~dp0results\* %~dp0..\results /s/h/e/k/f/c

@@ -11,7 +11,7 @@ NDVI/results/
 
 # Ignore image files in \QGIS
 QGIS/odm_orthophoto.tif
-QGIS/results/*
+QGIS/results/
 !QGIS/results/.gitkeep
 
 # Ignore all private documents
