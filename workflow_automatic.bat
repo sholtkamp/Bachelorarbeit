@@ -10,8 +10,7 @@ REM ##### Step 2: Standalone NDVI #####
 REM ##### Step 2 completed #####
 @echo:
 REM ##### Step 3: QGIS Tasks #####
-@cd ..\QGIS
-@cd \QGIS_NDVI
+@cd ..\QGIS\QGIS_NDVI
 @call "qgis_ndvi.bat"
 @cd ..\QGIS_NDVI_unsupervised
 @call "qgis_ndvi_unsupervised.bat"
@@ -19,5 +18,6 @@ REM ##### Step 3: QGIS Tasks #####
 @call "qgis_unsupervised.bat"
 @cd ..\QGIS_vectorize
 @call "qgis_vectorize.bat"
+@cd ..\..
 REM ##### Step 3 completed #####
-
+pause

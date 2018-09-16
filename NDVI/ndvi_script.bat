@@ -1,6 +1,5 @@
 REM Calculating NDVI
-docker build -t ba/ndvi_image . 
-docker run --name=ndvi_container ba/ndvi_image 
+docker run --name=ndvi_container sholtkamp/ndvi:1.0 
 @echo off
 mkdir results >nul 2>&1
 @cd results

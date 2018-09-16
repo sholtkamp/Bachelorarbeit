@@ -25,3 +25,6 @@ RUN pip3 install numpy
 
 # Run ndvi.py when the container launches
 ENTRYPOINT ["python", "ndvi.py"]
+
+# If you want to build your own image run:
+#    docker build -t sholtkamp/ndvi . 

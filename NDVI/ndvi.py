@@ -97,7 +97,7 @@ class GDALCalcNDVI (object):
                      outputLine, buf_xsize=red_band.XSize, buf_ysize=1, buf_type=gdal.GDT_Float32)
             # Delete the output line following write
             del outputLine
-        print 'NDVI Calculated. Your result is in the results folder'
+        print 'NDVI Calculated'
 
 
 

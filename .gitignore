@@ -1,12 +1,12 @@
 # Ignore image files in \ODM
-ODM/storage/*
-ODM/images/*
+ODM/storage/
+ODM/images/
 !ODM/storage/.gitkeep
 !ODM/results/.gitkeep
 
 # Ignore image files in \NDVI
 NDVI/odm_orthophoto.tif
-NDVI/results/*
+NDVI/results/
 !NDVI/results/.gitkeep
 
 # Ignore image files in \QGIS
