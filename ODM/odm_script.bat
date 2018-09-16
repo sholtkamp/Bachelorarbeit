@@ -25,11 +25,11 @@ mkdir %formated_odm_dirname%
 cd ..
 echo on
 REM Done
-REM Moving results to results
+REM Moving results to results folder
 @move odm_georeferencing results/%formated_odm_dirname% >nul
 @move odm_orthophoto results/%formated_odm_dirname% >nul
 @move odm_texturing results/%formated_odm_dirname% >nul
 @move odm_meshing results/%formated_odm_dirname% >nul
 @move opensfm results/%formated_odm_dirname% >nul
 @move odm_dem results/%formated_odm_dirname% >nul
-REM Results have been moved to results
+REM Results have been moved to results folder
