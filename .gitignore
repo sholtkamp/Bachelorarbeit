@@ -1,7 +1,7 @@
 # Ignore image files in \ODM
-ODM/storage/
+ODM/results/
 ODM/images/
-!ODM/storage/.gitkeep
+!ODM/images/.gitkeep
 !ODM/results/.gitkeep
 
 # Ignore image files in \NDVI
