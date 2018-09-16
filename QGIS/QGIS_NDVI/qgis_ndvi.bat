@@ -15,4 +15,3 @@ REM Cleaning up workspace
 @del odm_orthophoto.tif
 @rmdir results /S /Q >nul
 REM Cleanup done
-

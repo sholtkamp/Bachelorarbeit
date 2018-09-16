@@ -38,7 +38,3 @@ cat $QGIS_PROCESSING_LOGFILE
 echo " "
 echo "### model.sh ### QGIS log:"
 cat $QGIS_LOGFILE
-
-echo " "
-echo "### model.sh ### Workspace directory contents:"
-tree /workspace
