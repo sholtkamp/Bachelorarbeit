@@ -1,4 +1,6 @@
-REM Calculating NDVI
+REM Preparing workspace for NDVI calculation
+docker build -t sholtkamp/ndvi:1.0 . 
+REM Running container to calculate NDVI
 docker run --name=ndvi_container sholtkamp/ndvi:1.0 
 @echo off
 mkdir results >nul 2>&1
@@ -16,5 +18,4 @@ REM Cleaning up workspace
 @docker rm ndvi_container >nul
 @rmdir workspace /S /Q >nul
 REM Cleanup done
-
 

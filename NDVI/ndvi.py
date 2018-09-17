@@ -111,7 +111,7 @@ class GDALCalcNDVI (object):
           # Run calcNDVI function
           self.calcNDVI(filePath, outFilePath)
        else:
-          print 'NDVI Error: The file does not exist.'
+          print 'NDVI Error: Input file does not exist.'
 
 
 # Start the script by calling the run function.
