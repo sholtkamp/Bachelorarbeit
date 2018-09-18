@@ -73,11 +73,10 @@ print("###### You chose to calculate " + number_of_classes + " classes")
 print("")
 input_image = os.path.join(os.environ['QGIS_WORKSPACE'], "odm_orthophoto.tif")
 print("###### Input file " + input_image)
+
 output_directory = os.path.join(os.getenv('QGIS_RESULT', os.path.join(tempfile.gettempdir(), 'results')), datetime.datetime.now().strftime("%d.%m.%Y_%H.%M.%S (QGIS " + number_of_classes + " Classes [int])"))
 make_sure_path_exists(output_directory)
-
 output_image = os.path.join(output_directory, "Classification.tif")
-
 print("###### Saving output to file to " + output_image)
 
 print("###### Start processing at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " ...")
