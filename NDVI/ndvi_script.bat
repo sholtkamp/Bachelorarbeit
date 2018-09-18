@@ -18,4 +18,3 @@ REM Cleaning up workspace
 @docker rm ndvi_container >nul
 @rmdir workspace /S /Q >nul
 REM Cleanup done
-

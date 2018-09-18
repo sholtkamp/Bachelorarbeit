@@ -1,8 +1,10 @@
+# Based on the 2016 version written by Daniel Nuest <daniel.nuest@uni-muenster.de>
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#   http://www.apache.org/licenses/LICENSE-2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 
 # Print out QGIS environment
 echo "### model.sh ### Installed software versions:"
