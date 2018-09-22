@@ -42,8 +42,8 @@
                                 "description": "NDVI_raster", 
                                 "pos": {
                                     "values": {
-                                        "y": 254.0, 
-                                        "x": 129.0
+                                        "y": 245.0, 
+                                        "x": 123.0
                                     }, 
                                     "class": "point"
                                 }
@@ -62,7 +62,7 @@
                     "dependencies": [], 
                     "params": {
                         "-channels.nir": 3.0, 
-                        "-channels.mir": 1.0, 
+                        "-channels.mir": 4.0, 
                         "-in": {
                             "values": {
                                 "name": "input"
@@ -70,8 +70,8 @@
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
                         }, 
                         "-list": 0, 
-                        "-channels.blue": 1.0, 
                         "-ram": 2048.0, 
+                        "-channels.blue": 4.0, 
                         "-channels.green": 2.0, 
                         "-channels.red": 1.0
                     }, 

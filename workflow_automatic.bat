@@ -6,7 +6,7 @@ REM ##### Step 1: ODM #####
 REM ##### Step 1 completed #####
 
 @echo:
-REM ##### Step 2: Standalone NDVI #####
+REM ##### Step 2: Stand-alone NDVI #####
 @cd ..\NDVI
 @call "ndvi_script.bat"
 REM ##### Step 2 completed #####

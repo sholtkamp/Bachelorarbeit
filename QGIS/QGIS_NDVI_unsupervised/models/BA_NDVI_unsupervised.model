@@ -32,55 +32,6 @@
         "group": "BA", 
         "name": "BA_NDVI_unsupervised", 
         "algs": {
-            "OTBUNSUPERVISEDKMEANSIMAGECLASSIFICATION_1": {
-                "values": {
-                    "name": "OTBUNSUPERVISEDKMEANSIMAGECLASSIFICATION_1", 
-                    "paramsFolded": true, 
-                    "outputs": {
-                        "-out": {
-                            "values": {
-                                "description": "Classification", 
-                                "pos": {
-                                    "values": {
-                                        "y": 325.0, 
-                                        "x": 320.0
-                                    }, 
-                                    "class": "point"
-                                }
-                            }, 
-                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
-                        }
-                    }, 
-                    "outputsFolded": true, 
-                    "pos": {
-                        "values": {
-                            "y": 266.0, 
-                            "x": 118.0
-                        }, 
-                        "class": "point"
-                    }, 
-                    "dependencies": [], 
-                    "params": {
-                        "-maxit": 1000.0, 
-                        "-ct": 0.0001, 
-                        "-in": {
-                            "values": {
-                                "alg": "OTBRADIOMETRICINDICES_1", 
-                                "output": "-out"
-                            }, 
-                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
-                        }, 
-                        "-ts": 100.0, 
-                        "-ram": 2048.0, 
-                        "-nc": 5.0, 
-                        "-vm": null
-                    }, 
-                    "active": true, 
-                    "consoleName": "otb:unsupervisedkmeansimageclassification", 
-                    "description": "Unsupervised KMeans image classification"
-                }, 
-                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
-            }, 
             "OTBRADIOMETRICINDICES_1": {
                 "values": {
                     "name": "OTBRADIOMETRICINDICES_1", 
@@ -91,8 +42,8 @@
                                 "description": "NDVI", 
                                 "pos": {
                                     "values": {
-                                        "y": 205.0, 
-                                        "x": 320.0
+                                        "y": 243.0, 
+                                        "x": 210.0
                                     }, 
                                     "class": "point"
                                 }
@@ -119,14 +70,63 @@
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
                         }, 
                         "-list": 0, 
-                        "-channels.blue": 1.0, 
                         "-ram": 2048.0, 
+                        "-channels.blue": 1.0, 
                         "-channels.green": 2.0, 
                         "-channels.red": 1.0
                     }, 
                     "active": true, 
                     "consoleName": "otb:radiometricindices", 
                     "description": "Radiometric Indices"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "OTBUNSUPERVISEDKMEANSIMAGECLASSIFICATION_1": {
+                "values": {
+                    "name": "OTBUNSUPERVISEDKMEANSIMAGECLASSIFICATION_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "-out": {
+                            "values": {
+                                "description": "Classification", 
+                                "pos": {
+                                    "values": {
+                                        "y": 366.0, 
+                                        "x": 211.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 304.0, 
+                            "x": 115.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "-maxit": 1000.0, 
+                        "-ct": 0.0001, 
+                        "-in": {
+                            "values": {
+                                "alg": "OTBRADIOMETRICINDICES_1", 
+                                "output": "-out"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "-ts": 100.0, 
+                        "-ram": 2048.0, 
+                        "-nc": 5.0, 
+                        "-vm": null
+                    }, 
+                    "active": true, 
+                    "consoleName": "otb:unsupervisedkmeansimageclassification", 
+                    "description": "Unsupervised KMeans image classification"
                 }, 
                 "class": "processing.modeler.ModelerAlgorithm.Algorithm"
             }
