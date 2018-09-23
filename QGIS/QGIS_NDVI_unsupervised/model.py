@@ -81,7 +81,7 @@ print("###### Saving output to file to " + output_result_ndvi)
 print("###### Start processing at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + " ...")
 start = timer()
 
-processing.runalg("modeler:docker", input_image, output_result_classification, output_result_ndvi)
+processing.runalg("modeler:docker", input_image, output_result_ndvi, output_result_classification)
 
 end = timer()
 print("###### Processing complete at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()) + ", took " + str(end-start) + " seconds")

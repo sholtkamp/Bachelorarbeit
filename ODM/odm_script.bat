@@ -10,7 +10,7 @@ echo on
 REM Done
 
 REM Running ODM
-docker run -it --rm -v "%~dp0images:/code/images" -v "%~dp0odm_dem:/code/odm_dem" -v "%~dp0opensfm:/code/opensfm" -v "%~dp0odm_orthophoto:/code/odm_orthophoto" -v "%~dp0odm_georeferencing:/code/odm_georeferencing" -v "%~dp0odm_texturing:/code/odm_texturing"  -v "%~dp0odm_meshing:/code/odm_meshing" opendronemap/opendronemap:0.3.1 --dsm --time
+docker run -it --rm -v "%~dp0images:/code/images" -v "%~dp0odm_dem:/code/odm_dem" -v "%~dp0opensfm:/code/opensfm" -v "%~dp0odm_orthophoto:/code/odm_orthophoto" -v "%~dp0odm_georeferencing:/code/odm_georeferencing" -v "%~dp0odm_texturing:/code/odm_texturing"  -v "%~dp0odm_meshing:/code/odm_meshing" opendronemap/opendronemap:0.3.1 --dsm --dtm --time
 REM Done
 
 REM Copy generated orthophoto into directories for following steps
