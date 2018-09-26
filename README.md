@@ -28,3 +28,6 @@ von UAS-Daten mit Open-Source Software'. [Cotainerized, automated workflow for p
 ------------------------------------------------
 
 ## Useage:
+The automated workflow ist started by running workflow_automatic.bat
+Portainer.io can be started using run_portainer.io.bat
+To run specific QGIS scripts use qgis_script.bat or run specific batchfile in subfolder
