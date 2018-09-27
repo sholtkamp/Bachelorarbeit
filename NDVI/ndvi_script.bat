@@ -1,5 +1,5 @@
 REM Preparing workspace for NDVI calculation
-docker build -t sholtkamp/ndvi:1.0 . 
+docker build -t sholtkamp/ndvi:1.0 . --no-cache
 REM Running container to calculate NDVI
 docker run --name=ndvi_container sholtkamp/ndvi:1.0 
 @echo off

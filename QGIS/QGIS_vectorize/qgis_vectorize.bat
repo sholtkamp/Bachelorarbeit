@@ -5,7 +5,7 @@ copy odm_orthophoto.tif QGIS_vectorize
 cd QGIS_vectorize
 echo on
 REM Calculating Contours now
-docker build -t sholtkamp/qgis:1.0 . 
+docker build -t sholtkamp/qgis:1.0 . --no-cache
 docker run --name=QGIS sholtkamp/qgis:1.0
 REM Making the results accessable in the QGIS\results folder
 @docker cp QGIS:/results %~dp0 >nul
